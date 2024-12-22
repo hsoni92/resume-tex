@@ -4,10 +4,13 @@
   "description": "Resume built with Latex",
   "main": "index.js",
   "scripts": {
-    "build": "node compile.js"
+    "build": "node compile.js",
+    "coverletter": "node cover-letter.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fs-extra": "^11.2.0",
+    "pdfkit": "^0.15.2"
   }
 }

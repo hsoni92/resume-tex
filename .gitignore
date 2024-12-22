@@ -4,3 +4,4 @@ node_modules
 *.aux
 *.bcf
 *.run.xml
+coverLetter_*
