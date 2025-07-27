@@ -2,23 +2,30 @@
 Resume built with Latex
 
 #### Compilation Format
-LuaLatex / pdfLatex
+PDFLatex
 
-# Compilation Guide
+# Start Guide
 
-## Linux / MAC OS
 #### Requirements
 1. Node JS
 2. pdflatex
 
-#### Compile using
-`npm run build`
+#### Build PDF
+```
+npm run build
+```
 
+#### Generate Cover Letter
+```
+npm run coverletter
+```
 
+## Mac OS
+brew install basictex
 
-## Windows (Download MikTex to edit)
+## Windows (Download MikTex)
 https://miktex.org/download
 
-## Online Editor
+## Online Editor -- Overleaf (PDFLatex)
 https://www.overleaf.com/login
 (Download the zip archive and import directly to overleaf projects)
