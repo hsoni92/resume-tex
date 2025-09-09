@@ -52,6 +52,7 @@ const coverLetterTemplate = (companyName, role) => {
   return `
 Himanshu Soni
 er.hsoni92@gmail.com | +91-7382978592
+Portfolio: https://www.himanshusoni.dedyn.io
 
 ${formattedDate}
 

@@ -5,12 +5,20 @@
   "main": "index.js",
   "scripts": {
     "build": "node compile.js",
-    "coverletter": "node cover-letter.js"
+    "build:verbose": "node compile.js --verbose",
+    "build:clean": "node compile.js --clean",
+    "build:full": "node compile.js --verbose --clean",
+    "coverletter": "node cover-letter.js",
+    "watch": "nodemon --watch resume.tex --exec \"npm run build\"",
+    "clean": "node -e \"const {cleanupAuxFiles} = require('./compile.js'); cleanupAuxFiles().then(() => console.log('Cleanup complete')).catch(console.error)\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "fs-extra": "^11.2.0",
     "pdfkit": "^0.15.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }
