@@ -1,0 +1,15 @@
+1. Keep resume to one page
+2. Use ATS-friendly formatting (single column, standard fonts, PDF)
+3. Include exact keywords from the job description
+4. Quantify achievements with numbers
+5. Start every bullet with a strong action verb
+6. Add a dedicated skills section near the top
+7. Write a 3–5 line professional summary
+8. List experience in reverse chronological order
+9. Hyperlink GitHub/LinkedIn in the header
+10. Use X-Y-Z formula: [Accomplishment] by [Metric], by doing [Action]
+11. Tailor to company values (e.g., Amazon Leadership Principles)
+12. Remove vague language and filler words
+13. Test resume with ATS tools like Jobscan
+14. Focus on business impact, not just technical tasks
+15. Use confident, professional tone—no “beginner” labels

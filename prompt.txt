@@ -1,0 +1,4 @@
+Please refactor my current @resume.tex with respect to FAANG.template.tex.
+
+Keep the information intact.
+Stick to @Guidelines.text

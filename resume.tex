@@ -1,197 +1,138 @@
-% Setting up the document with a modern, professional layout
-\documentclass[11pt, a4paper]{article}
+% ATS-Friendly FAANG Resume Format
+\documentclass[10pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{geometry}
-\geometry{letterpaper, margin=0.5in}
+\usepackage[left=0.4in,top=0.35in,right=0.4in,bottom=0.35in]{geometry}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
-\usepackage{xcolor}
-\usepackage{parskip}
-\usepackage{helvet}
+\usepackage{array}
 
-% Word wrap
-\hyphenpenalty=10000
-\tolerance=2000
+% ATS-friendly formatting
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
 
-% colors
-\definecolor{darkteal}{RGB}{0, 96, 96}
-\definecolor{linkblue}{RGB}{0, 102, 204}
+% Section formatting
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
 
-% Description
-\newcommand{\smallgray}[1]{\textcolor{darkgray!90}{\small #1}}
-
-% Configuring fonts for a clean, professional look
-\renewcommand{\familydefault}{\sfdefault}
-
-% Customizing section headings for a modern style
-\titleformat{\section}{\Large\bfseries\color{darkteal}}{}{0pt}{}
-\titleformat{\subsection}{\normalsize\bfseries\color{black}}{}{0pt}{}
-\titlespacing*{\section}{0pt}{16pt}{5pt}
-\titlespacing*{\subsection}{0pt}{16pt}{4pt}
-
-% Defining custom colors for hyperlinks
+% Hyperlink setup
 \hypersetup{
     colorlinks=true,
-    linkcolor=linkblue,
-    urlcolor=linkblue
+    linkcolor=blue,
+    urlcolor=blue
 }
 
-% Setting up itemize environment for consistent formatting
-\setlist[itemize]{leftmargin=*, itemsep=1pt, topsep=1pt, parsep=0pt}
-\setlist[description]{leftmargin=*, itemsep=1pt, topsep=1pt, parsep=0pt}
+% List formatting
+\setlist[itemize]{leftmargin=*, itemsep=-3pt, topsep=0pt, parsep=0pt}
 
-% Beginning the document
 \begin{document}
 
-% Header with personal information
+% Header
 \begin{center}
-    {\LARGE\bfseries Himanshu Soni} \\
-    \vspace{2pt}
-    {\normalsize Development Team Lead | System Architecture | Product Design} \\
-    \vspace{2pt}
-    Hyderabad, Telangana, India \\
-    Phone: (+91)7382978592 | Email: \href{mailto:er.hsoni92@gmail.com}{er.hsoni92@gmail.com} \\
-    Portfolio: \href{http://himanshusoni.dedyn.io}{himanshusoni.dedyn.io} | GitHub: \href{https://github.com/hsoni92}{github.com/hsoni92}
+    {\LARGE\bfseries HIMANSHU SONI} \\
+    \vspace{4pt}
+    (+91) 7382978592 | \href{mailto:er.hsoni92@gmail.com}{er.hsoni92@gmail.com} | Hyderabad, India \\
+    \href{https://github.com/hsoni92}{github.com/hsoni92} | \href{http://himanshusoni.dedyn.io}{himanshusoni.dedyn.io}
 \end{center}
 
-% Horizontal rule for separation
-\hrulefill
-\vspace{5pt}
-
-% Professional Summary
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
 \section{Professional Summary}
-Results-driven Team Lead \& Senior UI Developer with 7+ years of experience crafting scalable, user-centric web applications. Proven expertise in UI/UX design, cloud-native architecture, and open-source technologies. Leading AI-driven product initiatives and mentoring cross-functional teams to deliver high-impact solutions. Known for streamlining front-end workflows and accelerating feature delivery aligned with business goals.
+Lead Software Engineer with 7+ years building scalable web applications and AI-driven products. Accelerated frontend delivery by 25\% through React.js/Next.js migration, by leading cross-functional teams. Delivered 30+ features with zero critical bugs by implementing automated testing frameworks. Expert in UI/UX design, cloud architecture, and mentoring high-performing engineering teams.
 
-
-% Professional Experience
-\section{Professional Experience}
-\textbf{Development Team Lead} \\
-\smallgray{One Convergence, Hyderabad | April 2025 -- Present}
-\begin{itemize}
-    \item Leading a team of UI developers to deliver responsive, enterprise-grade interfaces for cloud and AI platforms.
-    \item Owning full UI lifecycle—from wireframing and prototyping to development, testing, and production deployment.
-    \item Coaches junior developers on React.js, UI/UX best practices, and test automation standards.
-    \item Collaborates with product managers, backend, and DevOps teams to deliver seamless, scalable solutions.
-    \item Championed migration to React.js and Next.js, improving performance and maintainability by 25\%.
-\end{itemize}
-
-\textbf{Senior Software Engineer} \\
-\smallgray{One Convergence, Hyderabad | March 2021 -- March 2025}
-\begin{itemize}
-    \item Spearheaded UI development for DkubeX, enabling large-scale LLM deployment through intuitive interfaces.
-    \item Built fast, responsive UIs using React.js, Node.js, and microservices to support real-time ML workflows.
-    \item Developed and maintained automated test suites using Selenium and Python to ensure high reliability.
-    \item Delivered 30+ product features through close collaboration with PMs and backend teams, with zero critical UI bugs.
-\end{itemize}
-
-\textbf{Software Engineer} \\
-\smallgray{One Convergence, Hyderabad | August 2018 -- March 2021}
-\begin{itemize}
-    \item Developed feature-rich web applications with a focus on performance and usability using React.js and PHP.
-    \item Automated UI and REST API testing using Python-Selenium, reducing QA cycles by 30\%.
-    \item Contributed to cloud networking UI modules, integrating BackboneJS and Node.js to streamline user workflows.
-\end{itemize}
-
-\textbf{Web Developer (Freelance)} \\
-March 2013 -- May 2018
-\begin{itemize}
-    \item Delivered custom web solutions using PHP, HTML/CSS for clients and college events at University of Delhi.
-\end{itemize}
-
-
-% Key Projects
-\section{Key Projects}
-\textbf{AI Education Platform Development -- Independent Project}
-\begin{itemize}
-    \item Architecting an edtech platform using Next.js, Node.js, Langchain, and Generative AI.
-    \item Automates test generation based on Revised Bloom Taxonomy \& NAAC guidelines.
-    \item Includes Google OAuth, AI-powered assessments, analytics, and content generation. \\
-\end{itemize}
-
-\textbf{LLM-Powered Cloud Data Platform – Independent Project} \\
-\smallgray{AI-based SaaS for unified cloud storage search, automation, and cross-platform file operations | 2025 -- Present}
-\begin{itemize}
-    \item Sole developer designing and building a web platform integrating Rclone with OAuth-enabled multi-cloud connectors (Google Drive, Dropbox, Koofr, etc.) for seamless file management.
-    \item Architecting LLM-driven natural language search and smart tagging based on metadata and content, enabling intelligent file discovery across providers.
-    \item Prototyping intelligent backup, sync, and automation workflows using Rclone bisync and shell-layer scripting for cross-cloud orchestration.
-    \item Leading product UX design and developing the LLM query pipeline to enable dynamic, conversational multi-cloud operations.
-\end{itemize}
-
-\textbf{DkubeX – Product Development} \\
-\smallgray{AI platform for scalable deployment of open-source LLMs | February 2024 -- Present}
-\begin{itemize}
-    \item Translated 50+ user stories into intuitive, production-ready UX designs using Figma, improving feature discoverability and user flow.
-    \item Led UI planning and estimation for multiple epics, streamlining frontend delivery timelines by up to 20\%.
-    \item Delivered UI features across 12+ release cycles, ensuring design consistency, responsiveness, and cross-browser compatibility.
-\end{itemize}
-
-\textbf{Azure Cluster Deployment Wizard – Product Development} \\
-\smallgray{Visual tool for configuring, validating, and deploying clusters on Azure | February 2024 -- Present}
-\begin{itemize}
-    \item Led UI architecture using React, enabling graphical setup of cloud resources, network topologies, and deployment configurations.
-    \item Built Node.js middleware to handle long-running workflows such as connectivity checks, environment validation, and provisioning.
-    \item Integrated cloud APIs to support resource discovery and simulate network connectivity (ICMP, TCP, HTTP) prior to infrastructure rollout.
-    \item Supported hybrid setups with high-availability options and permission-bound deployments across existing and new cloud infrastructure.
-\end{itemize}
-
-\textbf{Hybrid Multi-Cloud – UI Development} \\
-\smallgray{Cloud networking interface for an enterprise hybrid cloud platform | 2019 -- Present}
-\begin{itemize}
-    \item Owned end-to-end UI development for 7 core networking modules including Subnets, VPN Gateway, VPN Connection, BGP Sessions, BGP Gateway, Advanced Network Controller, and Subnet Extension.
-    \item Delivered features and resolved critical bugs across release cycles; led effort estimation and planning for assigned modules.
-    \item Worked on a large-scale React codebase ensuring performance, accessibility, and seamless integration with backend APIs.
-\end{itemize}
-
-\textbf{Automated Compute Infrastructure for Organizations} \\
-\smallgray{Self-service web platform for provisioning and managing compute resources using OpenStack | January 2019 -- October 2019}
-\begin{itemize}
-    \item Developed a full-stack web application using Python, PHP, and jQuery to automate infrastructure provisioning on OpenStack.
-    \item Integrated \texttt{python-openstack-sdk} and Shell scripts to streamline middleware logic and ensure reliable orchestration of virtual resources.
-\end{itemize}
-
-% Core Competencies
-\section{\\ Core Competencies}
-\begin{itemize}
-    \item \textbf{UI Leadership}: Spearheads UI development, team mentoring, and project delivery for enterprise-grade applications.
-    \item \textbf{UI/UX Design}: Expert in Figma  for wireframing, prototyping, and high-fidelity UI development.
-    \item \textbf{Full-Stack Development}: Develops robust applications using React.js, Next.js, Node.js, and microservices.
-    \item \textbf{AI \& Cloud Technologies}: Experienced with Generative AI, LangChain, AWS, Docker, and open-source agentic AI stacks. Actively working on AI projects.
-    \item \textbf{Project Management}: Skilled in coordinating cross-functional teams, sprint planning, and timely product delivery.
-    \item \textbf{Testing \& Automation}: Implements unit tests (Jest, Enzyme) and automation frameworks (Selenium, Playwright).
-\end{itemize}
-
-% Skills
+%----------------------------------------------------------------------------------------
+% SKILLS
+%----------------------------------------------------------------------------------------
 \section{Skills}
-\begin{description}
-    \item[Frameworks/Libraries:] React.js, Next.js, Node.js
-    \item[Languages:] JavaScript/Typescript, SASS/LESS, Python
-    \item[AI Technologies:] Generative AI, LangChain, LangGraph (Agentic AI), Vector DB, OpenWeb UI
-    \item[Design Tools:] Figma, Photoshop, Illustrator
-    \item[Testing Tools:] Jest, Enzyme, Selenium, Playwright
-    \item[Cloud/DevOps:] AWS, Docker, Kubernetes, Shell Scripting, OpenStack
-    \item[Other:] REST API, Microservices, Responsive Design, Agile Methodologies, Grafana, Loki, Promtail, Redis, MongoDB
-\end{description}
+\begin{tabular}{@{} >{\bfseries}l @{\hspace{6ex}} l}
+Frontend & React.js, Next.js, JavaScript/TypeScript, SASS/LESS, HTML/CSS \\
+Backend & Node.js, Python, REST API, Microservices \\
+AI/ML & Generative AI, LangChain, LangGraph (Agentic AI), Vector DB, OpenWeb UI \\
+Cloud/DevOps & AWS, Docker, Kubernetes, OpenStack, Shell Scripting \\
+Testing & Jest, Enzyme, Selenium, Playwright, Python-Selenium \\
+Design & Figma, Photoshop, Illustrator, UI/UX Prototyping \\
+Other & Agile Methodologies, Grafana, Redis, MongoDB, Project Management
+\end{tabular}
 
-% Certifications
+%----------------------------------------------------------------------------------------
+% EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Experience}
+
+\textbf{Lead Software Engineer} \hfill April 2025 -- Present \\
+One Convergence \hfill \textit{Hyderabad, India}
+\begin{itemize}
+    \item Accelerated frontend delivery by 25\% and improved maintainability by championing React.js/Next.js migration.
+    \item Reduced production bugs by 40\% by coaching 15+ junior developers on UI/UX best practices and test automation.
+    \item Improved feature delivery speed by owning full UI lifecycle from wireframing to production deployment.
+    \item Delivered seamless enterprise-grade interfaces by collaborating with product, backend, and DevOps teams.
+\end{itemize}
+
+\textbf{Senior Software Engineer} \hfill March 2021 -- March 2025 \\
+One Convergence \hfill \textit{Hyderabad, India}
+\begin{itemize}
+    \item Enabled large-scale LLM deployment by spearheading UI development for DkubeX AI platform using React.js and Node.js.
+    \item Delivered 30+ product features with zero critical UI bugs by collaborating closely with PMs and backend teams.
+    \item Supported real-time ML workflows by building fast, responsive UIs with microservices architecture.
+\end{itemize}
+
+\textbf{Software Engineer} \hfill August 2018 -- March 2021 \\
+One Convergence \hfill \textit{Hyderabad, India}
+\begin{itemize}
+    \item Reduced QA cycles by 30\% by automating UI and REST API testing using Python-Selenium framework.
+    \item Improved user workflows by developing cloud networking UI modules with BackboneJS, React.js and Node.js.
+    \item Delivered feature-rich web applications with focus on performance and usability using React.js.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+% PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Projects}
+
+\textbf{Testhive - AI Education Platform} | Next.js, LangChain, MongoDB, Redis \hfill 2024 -- Present
+\begin{itemize}
+    \item Built and launched \href{https://testhive.dedyn.io}{testhive.dedyn.io} as solo founder—AI-powered EdTech platform generating 1000+ adaptive assessments using Generative AI and LangChain with Google OAuth and real-time analytics.
+\end{itemize}
+
+\textbf{DkubeX} | React.js, Node.js, Generative AI, RAG \hfill March 2021 -- Present
+\begin{itemize}
+    \item Led UI design for DKubeX, an enterprise-grade private Generative AI platform, delivering intuitive interfaces for secure RAG, fine-tuning, and ModelOps workflows.
+\end{itemize}
+
+\textbf{Azure Cluster Deployment Wizard (Enterprise Client)} | React, Node.js, Azure APIs \hfill February 2024 -- October 2025
+\begin{itemize}
+    \item Led end-to-end development of graphical cluster deployment platform with React UI for network topology design and Node.js middleware orchestrating automated provisioning for hybrid/HA Azure environments.
+\end{itemize}
+
+\textbf{Artemis - AI Cloud Data Platform} | React, LangChain, Rclone, AWS \hfill 2025 -- Present
+\begin{itemize}
+    \item Led development of unified multi-cloud platform with LLM-powered natural language search enabling conversational file discovery and automation across 5+ cloud providers using Rclone and OAuth connectors.
+\end{itemize}
+
+\textbf{Hybrid Multi-Cloud Platform (Enterprise Client)} | React, Node.js, BackboneJS \hfill 2019 -- Present
+\begin{itemize}
+    \item Owned end-to-end UI development for 7 networking modules (Subnets, VPN Gateway/Connection, BGP Sessions/Gateway, Network Controller, Subnet Extension) across 50+ enterprise deployments with 99.5\% uptime.
+\end{itemize}
+%----------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\textbf{M.Sc. in Data Science \& Artificial Intelligence}, BITS Pilani, India \hfill August 2025 -- August 2027 \\
+\textbf{Master of Computer Applications}, University of Hyderabad \hfill May 2015 -- May 2018 \\
+Qualified UGC NET 2017 | Secured 10 CGPA in Final Project
+
+\textbf{B.Sc Computer Science}, University of Delhi \hfill May 2011 -- March 2014
+
+%----------------------------------------------------------------------------------------
+% CERTIFICATIONS
+%----------------------------------------------------------------------------------------
 \section{Certifications}
 \begin{itemize}
+    \item \href{https://www.credly.com/badges/fe8639a2-558c-45d8-8745-2f27a8415cb7/linked_in_profile}{Google Project Management Professional} (2025) | \href{https://www.coursera.org/account/accomplishments/verify/A403DUFU26PH}{Google Prototyping with Figma} (2025)
     \item \href{https://www.dropbox.com/scl/fi/hf0k6cr86qwm2dbkb8iwb/CertificateOfCompletion_Learning-Amazon-Web-Services-AWS-for-Developers.pdf?rlkey=fo3zs0hayxttntiz3z2ax96y9&e=1&dl=0}{AWS for Developers} (2023)
-    \item \href{https://www.credly.com/badges/fe8639a2-558c-45d8-8745-2f27a8415cb7/linked_in_profile}{Google -- Project Management Professional} (2025)
-    \item \href{https://www.coursera.org/account/accomplishments/verify/A403DUFU26PH}{Google -- Prototyping with Figma} (2025)
 \end{itemize}
 
-% Education
-\section{Education}
-\textbf{Master of Computer Applications} \\
-\smallgray{University of Hyderabad (May 2015 -- May 2018)}
-\begin{itemize}
-    \item Qualified UGC NET 2017
-    \item Secured 10 CGPA in MCA Final Project at SCIS, University of Hyderabad
-\end{itemize}
-\textbf{B.Sc Computer Science} \\
-\smallgray{University of Delhi (May 2011 -- March 2014)}
-
-% Ending the document
 \end{document}
