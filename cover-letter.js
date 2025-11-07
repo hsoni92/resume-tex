@@ -56,16 +56,12 @@ Portfolio: https://www.himanshusoni.dedyn.io
 
 ${formattedDate}
 
-Hiring Manager
+Dear Hiring Manager,
 ${companyName}
 
-Dear Hiring Manager,
+I'm a Lead Software Engineer with 7+ years in UI leadership. At ${previouscompany}, I accelerated delivery by 25% through React.js/Next.js migration, mentored 15+ developers, and shipped 30+ features with zero critical bugs.
 
-I am excited to apply for the ${role} position at ${companyName}. With a strong background in full-stack development, UI/UX design, product management, and experience with technologies like React, NodeJS, and Generative AI, I'm eager to contribute to your team.
-
-At ${previouscompany}, I led initiatives to improve product features, streamline processes, and enhance usability. I thrive in fast-paced environments and am passionate about delivering impactful user experiences.
-
-I'd love the opportunity to discuss how my skills align with ${companyName}'s goals. Thank you for considering my application.
+I'd welcome the opportunity to discuss driving ${companyName}'s frontend vision.
 
 Sincerely,
 Himanshu Soni
